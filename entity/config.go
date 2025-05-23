@@ -1,7 +1,7 @@
 package entity
 
 import (
-	"arieoldman/arieoldman/krios/common"
+	"sdn/sdncore/common"
 )
 
 // Config is the entity which describes an SDN configuration.

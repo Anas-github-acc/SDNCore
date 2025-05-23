@@ -1,8 +1,8 @@
 package usecase
 
 import (
-	"arieoldman/arieoldman/krios/common"
-	"arieoldman/arieoldman/krios/entity"
+	"sdn/sdncore/common"
+	"sdn/sdncore/entity"
 	"github.com/golang/glog"
 )
 

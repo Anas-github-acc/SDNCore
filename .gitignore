@@ -1,12 +1,31 @@
 # Binaries for programs and plugins
 *.exe
-*.exe~
 *.dll
 *.so
 *.dylib
 
-# Test binary, build with `go test -c`
+# Test binary, built with `go test -c`
 *.test
 
-# Output of the go coverage tool, specifically when used with LiteIDE
-*.out
+# Compiled Object files, if not part of a module or explicitly ignored
+*.o
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.bak
+*.log
+
+# Build output
+bin/
+pkg/
+
+# Dependency vendor directory (if not using Go modules)
+vendor/
+
+# Environment variables
+.env
+
+main_2.go
+script.*

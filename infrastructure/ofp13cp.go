@@ -1,8 +1,7 @@
 package infrastructure
 
 import (
-	// "arieoldman/arieoldman/krios/common"
-	"arieoldman/arieoldman/krios/controller"
+	"sdn/sdncore/controller"
 	"fmt"
 	"github.com/golang/glog"
 	"github.com/google/gopacket"

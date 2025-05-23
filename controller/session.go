@@ -1,9 +1,9 @@
 package controller
 
 import (
-	"arieoldman/arieoldman/krios/common"
-	"arieoldman/arieoldman/krios/entity"
-	"arieoldman/arieoldman/krios/usecase"
+	"sdn/sdncore/common"
+	"sdn/sdncore/entity"
+	"sdn/sdncore/usecase"
 )
 
 // SessionManager defines the behaviour of a controller session.

@@ -1,5 +1,3 @@
-# Krios
-
 ## Requirements
 
 * The controller should only handshake with switches it is configured to interact with, identified by MAC address.
@@ -7,7 +5,6 @@
 ## Architecture Brief
 
 * The project will employ Clean Architecture principles and Domain Driven Design principles.
-* The project will practice *package by component* to separate contexts.
 
 ## Abstractions
 
@@ -40,5 +37,3 @@
   * `ConcreteControlPlane` receives `ControllerSession` as an injected dependency.
   * `ConcreteControlPlane` should handle handshakes on it's own.
 * `ConfigFile`, `ConfigRepository`, concrete `YAMLConfigRepository`
-
-![Clean Diagram](Krios-Config-Clean.jpg)
