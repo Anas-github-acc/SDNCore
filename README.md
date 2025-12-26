@@ -1,38 +1,38 @@
-# SDN Core🌐
+# SDN Core
 
 > A high-performance OpenFlow 1.3 SDN controller built with Go
 
 *A Software-Defined Networking (SDN) controller build using Clean Architecture and Domain-Driven Design. It features comprehensive OpenFlow 1.3 support and advanced Layer 2 switching, making it a prime choice for network virtualization and programmable network applications.*
 
-## ✨ Key Features
+## Key Features
 
-🔌 **OpenFlow 1.3 Protocol**
+**OpenFlow 1.3 Protocol**
 
 - Full OpenFlow 1.3 specification compliance
 - Secure handshake and feature negotiation
 - Flow table management and packet processing
 
-🔄 **Layer 2 Switching**
+**Layer 2 Switching**
 
 - Dynamic MAC address learning
 - Intelligent forwarding decisions
 - Broadcast flood handling
 - Loop prevention mechanisms
 
-🏗️ **Clean Architecture**
+**Clean Architecture**
 
 - Domain-driven design principles
 - Separation of concerns
 - Testable and maintainable codebase
 - Package-by-component organization
 
-🔒 **Security & Configuration**
+**Security & Configuration**
 
 - MAC address-based switch authorization
 - Configurable datapath whitelisting
 - Runtime monitoring and logging
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -73,11 +73,11 @@ go run main.go
 
 The controller will:
 
-- ✅ Initialize session and load configuration
-- ✅ Set up OpenFlow 1.3 control plane
-- ✅ Configure Layer 2 switching logic
-- ✅ Listen on port 6633 for switch connections
-- ✅ Display real-time status indicator
+- Initialize session and load configuration
+- Set up OpenFlow 1.3 control plane
+- Configure Layer 2 switching logic
+- Listen on port 6633 for switch connections
+- Display real-time status indicator
 
 ### Testing with Qemu
 
@@ -90,70 +90,6 @@ sudo mn --controller=remote,ip=127.0.0.1,port=6633 --switch ovsk,protocols=OpenF
 # Test connectivity
 mininet> pingall
 ```
-
-## 🏛️ Architecture Overview
-
-Krios follows Clean Architecture principles with distinct layers:
-
-```
-┌─────────────────────────────────────────────────────────┐
-│                    Infrastructure Layer                 │
-│  ┌─────────────────┐  ┌─────────────────────────────┐   │
-│  │   OpenFlow 1.3  │  │    Network Adapters         │   │
-│  │   Protocol      │  │    (TCP, WebSocket)         │   │
-│  └─────────────────┘  └─────────────────────────────┘   │
-└─────────────────────────────────────────────────────────┘
-                                         │
-┌─────────────────────────────────────────────────────────┐
-│                    Interface Layer                      │
-│  ┌─────────────────┐  ┌─────────────────────────────┐   │
-│  │   Controllers   │  │      Session Management     │   │
-│  │   (REST/CLI)    │  │      (WebSocket, gRPC)      │   │
-│  └─────────────────┘  └─────────────────────────────┘   │
-└─────────────────────────────────────────────────────────┘
-                                         │
-┌─────────────────────────────────────────────────────────┐
-│                    Use Case Layer                       │
-│  ┌─────────────────┐  ┌─────────────────────────────┐   │
-│  │   Handshake     │  │   Configuration Loading     │   │
-│  │   Logic         │  │   Flow Management           │   │
-│  └─────────────────┘  └─────────────────────────────┘   │
-└─────────────────────────────────────────────────────────┘
-                                         │
-┌─────────────────────────────────────────────────────────┐
-│                    Entity Layer                         │
-│  ┌─────────────────┐  ┌─────────────────────────────┐   │
-│  │   Config        │  │    Control Plane            │   │
-│  │   Domain        │  │    Flow Tables              │   │
-│  └─────────────────┘  └─────────────────────────────┘   │
-└─────────────────────────────────────────────────────────┘
-```
-
-## 📁 Project Structure
-
-```
-SDNCore/
-├── 📄 main.go                      # Application entry point
-├── 📄 README.md                    # This file
-├── 📄 go.mod                       # Go module definition
-├── 📄 go.sum                       # Dependency checksums
-├── 📂 common/                      # Shared utilities
-│   └── 📄 types.go                 # Common type definitions
-├── 📂 controller/                  # Interface adapters
-│   └── 📄 session.go               # Session management
-├── 📂 entity/                      # Domain entities
-│   ├── 📄 config.go                # Configuration domain
-│   └── 📄 controlplane.go          # Control plane interface
-├── 📂 infrastructure/              # External interfaces
-│   ├── 📄 base.go                  # Infrastructure base
-│   └── 📄 ofp13cp.go               # OpenFlow 1.3 implementation
-├── 📂 usecase/                     # Application business logic
-│   ├── 📄 base.go                  # Use case base
-│   ├── 📄 handshake.go             # Handshake orchestration
-│   └── 📄 loadconfig.go            # Configuration loading
-```
-
-## 🔧 Configuration
 
 ### Switch Authorization
 
@@ -176,7 +112,7 @@ By default, Krios listens on port 6633. To change this:
 cp.Start(6653) // Custom port
 ```
 
-## 🧪 Development
+## Development
 
 ### Building
 
@@ -204,13 +140,7 @@ golangci-lint run
 go vet ./...
 ```
 
-## 📚 Documentation
-
-- 📖 [**Layer 2 Switch Implementation**](L2SWITCH.md) - Detailed switching logic
-- 🏗️ [**Controller Design**](DESIGNING_CONTROLLER.md) - Architecture decisions
-- 📝 [**OpenFlow 1.3 Notes**](NOTES.md) - Protocol implementation details
-
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please see our contributing guidelines:
 
@@ -220,13 +150,6 @@ We welcome contributions! Please see our contributing guidelines:
 4. Add tests for new functionality
 5. Run tests and ensure they pass
 6. Submit a pull request
-
-## 🙏 Acknowledgments
-
-- **OpenFlow 1.3 Specification** - [Open Networking Foundation](https://opennetworking.org/)
-- **Clean Architecture** - Robert C. Martin
-- **Domain-Driven Design** - Eric Evans
-- **Go Programming Language** - The Go Team
 
 ## 🔗 Links
 
